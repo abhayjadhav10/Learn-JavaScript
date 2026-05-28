@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color the Boxes (hover)</title>
+
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Exercise 1: Hover Color Boxes (Upgrade your current logic)
+
+    👉 Task:
+
+        When you hover over a box → change background + text color
+        When you remove mouse → revert back to original color
+
+    👉 Twist:
+
+        Store the original colors before changing
+        Don’t hardcode anything
+
+    👉 What this tests:
+
+        Event handling (mouseenter, mouseleave)
+        State management (saving previous values) -->
+
+    <div class="container">
+      <div class="box" id="box1">Box1</div>
+      <div class="box" id="box2">Box2</div>
+      <div class="box" id="box3">Box3</div>
+      <div class="box" id="box4">Box4</div>
+      <div class="box" id="box5">Box5</div>
+    </div>
+
+    <script src="colorTheBox(hover).js"></script>
+  </body>
+</html>
