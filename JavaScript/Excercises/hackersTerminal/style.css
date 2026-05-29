@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* Background Image */
+
+.heroImg{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    filter:
+        brightness(0.25)
+        contrast(1.15)
+        saturate(1.1);
+}
+
+/* Main Terminal */
+
+.textOnScreen{
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    min-width: 900px;
+
+    padding:
+        35px 45px;
+
+    color: #00ff66;
+
+    font-size: 52px;
+
+    letter-spacing: 3px;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    border:
+        1px solid rgba(0, 255, 102, 0.4);
+
+    border-radius: 6px;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 102, 0.15),
+        inset 0 0 20px rgba(0, 255, 102, 0.08);
+
+    text-shadow:
+        0 0 5px rgba(0, 255, 102, 0.8);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+/* Top Terminal Bar */
+
+.textOnScreen::before{
+
+    content: "SECURE TERMINAL";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 8px 0;
+
+    background:
+        rgba(0, 255, 102, 0.08);
+
+    color:
+        rgba(0, 255, 102, 0.7);
+
+    font-size: 16px;
+
+    letter-spacing: 5px;
+
+    border-bottom:
+        1px solid rgba(0, 255, 102, 0.15);
+}
+
+/* Scanline Effect */
+
+.textOnScreen::after{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0,255,102,0.03),
+            rgba(0,255,102,0.03) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+
+    pointer-events: none;
+}
+
+/* Slight Screen Flicker */
+
+.textOnScreen{
+    animation:
+        flicker 0.08s infinite alternate;
+}
+
+@keyframes flicker{
+
+    from{
+        opacity: 0.97;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
